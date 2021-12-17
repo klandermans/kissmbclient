@@ -1,5 +1,5 @@
 # kissmbclient
-Kiss SMBclient python wrapper
+Kiss (keep it stupid & simple) SMBclient python wrapper
 
 I struggled with verifying files on the windows share from Python. Preferably I would have used an MD5 checksum. Unfortunately, the SMB protocol does not support this. That's why I only made a validation based on filesize.
 
