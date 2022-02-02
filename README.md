@@ -5,4 +5,17 @@ I struggled with verifying files on the windows share from Python. Preferably I 
 
 To copy and verify I made a kiss wrapper. This is because the existing wrappers were not what I was looking for.
 
+# run the script
+- add your WUR credentials to the script
+- create desination directory
 
+```
+from smb import smb
+
+dest = '/home/bert/data/'
+files = smb.listDict(folder)
+for file in files:
+  smb.get(file['name'], dest)
+  processWithYourScript(dest+file['name'])
+  smb.put(local ,dest,file)
+```
