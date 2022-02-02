@@ -11,12 +11,13 @@ To copy and verify I made a kiss wrapper. This is because the existing wrappers 
 
 ```
 from smb import smb
-
-sourceFolder = '/'
+smb.password='password123123'
+sourceFolder = 'asg/WLR_Dataopslag/DairyCampus'
 dest = '/home/bert/data/'
-files = smb.listDict(folder)
+files = smb.listDict(sourceFolder)
 for file in files:
-  smb.get(file['name'], dest)
-  processWithYourScript(dest+file['name'])
-  smb.put(local ,dest,file)
+    print(file)
+    smb.get(file['name'], dest)
+    processWithYourScript(dest+file['name'])
+    smb.put(local ,dest,file)
 ```
