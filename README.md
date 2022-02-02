@@ -12,6 +12,7 @@ To copy and verify I made a kiss wrapper. This is because the existing wrappers 
 ```
 from smb import smb
 
+sourceFolder = '/'
 dest = '/home/bert/data/'
 files = smb.listDict(folder)
 for file in files:
